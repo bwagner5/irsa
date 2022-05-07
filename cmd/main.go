@@ -66,7 +66,7 @@ func main() {
 				fmt.Printf("❌ %s\n", err)
 				os.Exit(1)
 			}
-			fmt.Println(role)
+			fmt.Printf("kubectl annotate serviceaccount -n %s %s eks.amazonaws.com/role-arn=%s\n", namespace, serviceAccountName, role)
 		},
 	}
 	rootCmd.PersistentFlags().StringVar(&options.roleName, "role-name", "", "the name of the IAM Role")
