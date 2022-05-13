@@ -73,7 +73,7 @@ func main() {
 	rootCmd.PersistentFlags().StringSliceVar(&options.policies, "policies", []string{}, "policy from a file (file://<>) or a URL (http(s)://<>)")
 	rootCmd.PersistentFlags().StringSliceVar(&options.policyARNs, "policy-arns", []string{}, "policy ARNs to add to the IAM Role")
 	rootCmd.PersistentFlags().StringVar(&options.clusterName, "cluster-name", "", "the EKS cluster name")
-	rootCmd.PersistentFlags().StringVar(&options.serviceAccount, "service-account", "", "the namespaced name of the service account (i.e. my-namespace/my-sa")
+	rootCmd.PersistentFlags().StringVar(&options.serviceAccount, "service-account", "", "the namespaced name of the service account (i.e. my-namespace/my-sa)")
 	rootCmd.PersistentFlags().BoolVarP(&options.version, "version", "v", false, "the version")
 	rootCmd.PersistentFlags().StringVarP(&options.region, "region", "r", "", "the AWS Region")
 	rootCmd.PersistentFlags().StringVarP(&options.profile, "profile", "p", "", "the AWS Profile")
